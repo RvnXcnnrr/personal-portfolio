@@ -77,7 +77,6 @@ const About = () => {
                 Current Goals
               </h4>
               <ul>
-                <li>Complete my BSIT degree with honors</li>
                 <li>Master React.js and Node.js for full-stack development</li>
                 <li>Build a strong portfolio of diverse web projects</li>
                 <li>Contribute to open-source projects</li>
