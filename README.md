@@ -280,3 +280,5 @@ This project is open source and available under the [MIT License](LICENSE).
 **Live Demo**: [Coming Soon - Deploy to see your live portfolio!]
 
 **Note**: This portfolio is designed for a BSIT student actively seeking opportunities. The project is optimized for deployment on Vercel with automatic builds and deployments from GitHub.
+#   D e p l o y m e n t   t r i g g e r  
+ 
