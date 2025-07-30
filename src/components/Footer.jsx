@@ -76,11 +76,11 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="footer-brand">
               <div className="brand-logo">
-                <span className="logo-text text-gradient">Portfolio</span>
+                <span className="logo-text text-gradient">JMR Portfolio</span>
               </div>
               <p className="brand-description">
-                Passionate web developer creating amazing digital experiences 
-                with modern technologies. Always learning, always building.
+                Passionate BSIT student and web developer creating amazing digital experiences 
+                with modern technologies. Specializing in React.js, WordPress, and responsive design.
               </p>
               <div className="brand-stats">
                 <div className="stat">
@@ -128,28 +128,40 @@ const Footer = () => {
             </div>
 
             {/* Contact & Social */}
-            <div className="footer-section">
-              <h4>Let's Connect</h4>
+            <div className="footer-section footer-contact">
+              <h4>Get In Touch</h4>
               <div className="contact-info">
-                <p>Available for freelance projects</p>
-                <a href="mailto:rodillon.javy.32181@gmail.com" className="contact-email">
-                  rodillon.javy.32181@gmail.com
-                </a>
-              </div>
-              <div className="social-links">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-link"
-                    title={`Connect with me on ${social.label}`}
-                  >
-                    {social.icon}
-                    <span className="social-handle">{social.handle}</span>
+                <p className="availability-status">
+                  <span className="status-dot available"></span>
+                  Available for freelance projects
+                </p>
+                <div className="contact-methods">
+                  <a href="mailto:rodillon.javy.32181@gmail.com" className="contact-email">
+                    <Mail size={16} />
+                    rodillon.javy.32181@gmail.com
                   </a>
-                ))}
+                </div>
+              </div>
+              <div className="social-section">
+                <h5>Connect With Me</h5>
+                <div className="social-links">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-link"
+                      title={`Connect with me on ${social.label}`}
+                    >
+                      {social.icon}
+                      <div className="social-details">
+                        <span className="social-platform">{social.label}</span>
+                        <span className="social-handle">{social.handle}</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
