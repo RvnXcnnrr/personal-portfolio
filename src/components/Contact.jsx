@@ -3,14 +3,11 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  Github, 
-  Linkedin, 
   Send,
   Clock,
   MessageCircle,
   CheckCircle,
-  AlertCircle,
-  Globe
+  AlertCircle
 } from 'lucide-react';
 import { sendContactEmail } from '../services/emailService';
 import { useTestimonials } from '../contexts/TestimonialContext';
@@ -191,33 +188,6 @@ const Contact = () => {
       value: 'Within 24 hours',
       link: null,
       description: 'Usually respond faster'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Github size={24} />,
-      label: 'GitHub',
-      url: 'https://github.com/RvnXcnnrr',
-      username: '@RvnXcnnrr'
-    },
-    {
-      icon: <Linkedin size={24} />,
-      label: 'LinkedIn',
-      url: 'https://linkedin.com',
-      username: 'Javy Malisud Rodillon'
-    },
-    {
-      icon: <Mail size={24} />,
-      label: 'Email',
-      url: 'mailto:rodillon.javy.32181@gmail.com',
-      username: 'rodillon.javy.32181@gmail.com'
-    },
-    {
-      icon: <Globe size={24} />,
-      label: 'Website',
-      url: '#',
-      username: 'portfolio.dev'
     }
   ];
 
@@ -410,29 +380,6 @@ const Contact = () => {
                       <small>{info.description}</small>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="social-section">
-              <h4>Let's Connect</h4>
-              <div className="social-grid">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="social-card card"
-                  >
-                    <div className="social-icon">
-                      {social.icon}
-                    </div>
-                    <div className="social-info">
-                      <strong>{social.label}</strong>
-                      <span>{social.username}</span>
-                    </div>
-                  </a>
                 ))}
               </div>
             </div>
