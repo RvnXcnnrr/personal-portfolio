@@ -1,4 +1,23 @@
-# Javy Malisud Rodillon - Personal Portfolio
+# 🚀 Javy Malisud Rodillon - Personal Portfolio
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://personal-portfolio-rvnxcnnrr.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/RvnXcnnrr/personal-portfolio)
+[![React](https://img.shields.io/badge/React-18.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+
+A modern, responsive personal portfolio website built with React.js for a BSIT (Bachelor of Science in Information Technology) student. This portfolio showcases skills, projects, services, and provides a professional online presence.
+
+![Portfolio Preview](https://via.placeholder.com/800x400/4f46e5/ffffff?text=Portfolio+Website)
+
+## 👨‍💻 About
+
+**Javy Malisud Rodillon**  
+- **Age**: 24 years old  
+- **Birthday**: May 12, 2001  
+- **Email**: rodillon.javy.32181@gmail.com  
+- **GitHub**: [@RvnXcnnrr](https://github.com/RvnXcnnrr)
+- **Education**: BSIT Student (Expected 2025)  
+- **Specialization**: Web Development, WordPress, React.js Rodillon - Personal Portfolio
 
 A modern, responsive personal portfolio website built with React.js for a BSIT (Bachelor of Science in Information Technology) student. This portfolio showcases skills, projects, services, and provides a professional online presence.
 
@@ -158,6 +177,34 @@ src/
 
 Edit the CSS custom properties in `src/styles/global.css`:
 
+## 🚀 Deployment
+
+This portfolio is ready for deployment on multiple platforms:
+
+### Vercel (Recommended)
+1. Fork this repository
+2. Connect your GitHub account to [Vercel](https://vercel.com)
+3. Import your forked repository
+4. Add environment variables (if using EmailJS)
+5. Deploy automatically
+
+### Netlify
+1. Build the project: `npm run build`
+2. Upload the `dist` folder to Netlify
+3. Configure environment variables in Netlify dashboard
+
+### Environment Variables for Production
+```bash
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+## 🎨 Customization
+
+### Color Scheme
+Modify the CSS custom properties in `src/index.css`:
+
 ```css
 :root {
   --primary-color: #4f46e5;
@@ -193,12 +240,28 @@ Edit the CSS custom properties in `src/styles/global.css`:
 - **CSS Custom Properties**: Efficient theming system
 - **Minimal Dependencies**: Lightweight bundle size
 
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
 ## 📧 Contact
 
-For any questions or suggestions regarding this portfolio:
-
+**Javy Malisud Rodillon**
 - **Email**: rodillon.javy.32181@gmail.com
-- **LinkedIn**: [Javy Malisud Rodillon](https://linkedin.com/in/javyrodillon)
+- **GitHub**: [@RvnXcnnrr](https://github.com/RvnXcnnrr)
+- **Portfolio**: [Live Demo](https://personal-portfolio-rvnxcnnrr.vercel.app)
+
+---
+
+⭐ If you found this helpful, please give this repository a star!
 - **GitHub**: [RvnXcnnrr](https://github.com/RvnXcnnrr)
 
 ## 📄 License
