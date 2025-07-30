@@ -1,0 +1,494 @@
+.services-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-intro p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.service-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card.expanded {
+  transform: none;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.service-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 1rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.service-info {
+  min-width: 0;
+}
+
+.service-info h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.service-short-desc {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.service-pricing {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  justify-content: flex-end;
+}
+
+.service-details {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  animation: expandDetails 0.3s ease-out;
+}
+
+@keyframes expandDetails {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-description p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.service-features h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.service-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.service-features li svg {
+  color: var(--success-color);
+  flex-shrink: 0;
+}
+
+.service-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.work-process {
+  margin-bottom: 5rem;
+}
+
+.process-title {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+  background: var(--bg-secondary);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.step-icon {
+  color: var(--primary-color);
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.process-step h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.process-step p {
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.step-connector {
+  display: none;
+}
+
+.testimonials-section {
+  margin-bottom: 4rem;
+}
+
+.testimonials-title {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.testimonial-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  color: var(--warning-color);
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.testimonial-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-author strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.testimonial-author span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.service-tag {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.services-cta {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 2rem;
+  padding: 4rem 3rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  animation: float 20s ease-in-out infinite;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.services-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.services-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.cta-feature svg {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-actions .btn {
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid white;
+}
+
+.cta-actions .btn:hover {
+  background: transparent;
+  color: white;
+}
+
+.cta-actions .btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.cta-actions .btn-outline:hover {
+  background: white;
+  color: var(--primary-color);
+  border-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .service-header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .service-pricing {
+    text-align: center;
+  }
+
+  .duration {
+    justify-content: center;
+  }
+
+  .service-actions {
+    flex-direction: column;
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-features ul {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    padding: 1.5rem 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-author {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .services-cta {
+    padding: 3rem 2rem;
+  }
+
+  .services-cta h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-header {
+    gap: 0.75rem;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .service-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-short-desc {
+    font-size: 0.9rem;
+  }
+
+  .process-step {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .services-cta {
+    padding: 2rem 1rem;
+  }
+
+  .services-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .services-cta p {
+    font-size: 1rem;
+  }
+}
