@@ -1,7 +1,18 @@
 # 🚀 Javy Malisud Rodillon - Personal Portfolio
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://personal-portfolio-rvnxcnnrr.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/RvnXcnnrr/personal-portfolio)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-b⭐ If you found this helpful, please give this repository a star!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- React.js team for the amazing framework
+- Vite for the fast build tool
+- React Icons for the beautiful icon library
+- All the open-source contributors who made this possiblehttps://github.com/RvnXcnnrr/personal-portfolio)
 [![React](https://img.shields.io/badge/React-18.0-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
@@ -262,9 +273,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 ⭐ If you found this helpful, please give this repository a star!
-
-<!-- Deployment: Latest update -->
-- **GitHub**: [RvnXcnnrr](https://github.com/RvnXcnnrr)
 
 ## 📄 License
 
