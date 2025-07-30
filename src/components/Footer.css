@@ -144,6 +144,12 @@
 .footer-contact {
   border-left: 2px solid var(--primary-color);
   padding-left: 1.5rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.social-section {
+  margin-top: 1.5rem;
 }
 
 .social-section h5 {
@@ -170,6 +176,7 @@
   border-radius: 0.75rem;
   margin: -0.75rem;
   border: 1px solid transparent;
+  min-width: 0; /* Prevents overflow */
 }
 
 .social-link:hover {
@@ -183,16 +190,24 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-width: 0; /* Prevents overflow */
+  flex: 1;
 }
 
 .social-platform {
   font-weight: 500;
   font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .social-handle {
   font-size: 0.8rem;
   color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .footer-bottom {

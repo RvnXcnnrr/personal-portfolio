@@ -42,14 +42,8 @@ const Footer = () => {
     {
       icon: <Linkedin size={20} />,
       label: 'LinkedIn',
-      url: 'https://linkedin.com',
+      url: 'https://linkedin.com/in/javy-rodillon',
       handle: 'Javy Malisud Rodillon'
-    },
-    {
-      icon: <Mail size={20} />,
-      label: 'Email',
-      url: 'mailto:rodillon.javy.32181@gmail.com',
-      handle: 'rodillon.javy.32181@gmail.com'
     }
   ];
 
