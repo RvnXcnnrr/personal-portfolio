@@ -5,15 +5,6 @@ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_your_serv
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_your_template_id'; 
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
 
-// Debug environment variables
-console.log('🔍 Environment Variables Debug:');
-console.log('- import.meta.env.VITE_EMAILJS_SERVICE_ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
-console.log('- import.meta.env.VITE_EMAILJS_TEMPLATE_ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-console.log('- import.meta.env.VITE_EMAILJS_PUBLIC_KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-console.log('- Final SERVICE_ID:', SERVICE_ID);
-console.log('- Final TEMPLATE_ID:', TEMPLATE_ID);
-console.log('- Final PUBLIC_KEY:', PUBLIC_KEY);
-
 // Development mode check
 const isDevelopment = import.meta.env.DEV;
 
