@@ -9,8 +9,8 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
-import { sendContactEmail } from '../services/emailService';
-import { useTestimonials } from '../contexts/TestimonialContext';
+import { sendContactEmail } from '../../services/emailService';
+import { useTestimonials } from '../../contexts/TestimonialContext';
 import './Contact.css';
 
 const Contact = () => {

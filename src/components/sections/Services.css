@@ -75,10 +75,18 @@
 }
 
 .price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 700;
-  color: var(--primary-color);
-  font-size: 1.1rem;
   margin-bottom: 0.25rem;
+  justify-content: flex-end;
+}
+
+.price-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .duration {

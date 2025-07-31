@@ -1,14 +1,13 @@
 import React from 'react';
 import { 
-  Github, 
-  Linkedin, 
-  Mail, 
   Heart, 
   ArrowUp,
   Code,
   Coffee,
-  Globe
+  Globe,
+  Clock
 } from 'lucide-react';
+import CurrencyIndicator from '../ui/CurrencyIndicator';
 import './Footer.css';
 
 const Footer = () => {
@@ -30,21 +29,6 @@ const Footer = () => {
     'UI/UX Design',
     'Website Optimization',
     'SEO & Analytics'
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Github size={20} />,
-      label: 'GitHub',
-      url: 'https://github.com/RvnXcnnrr',
-      handle: '@RvnXcnnrr'
-    },
-    {
-      icon: <Linkedin size={20} />,
-      label: 'LinkedIn',
-      url: 'https://linkedin.com/in/javy-rodillon',
-      handle: 'Javy Malisud Rodillon'
-    }
   ];
 
   const handleScrollToTop = () => {
@@ -92,21 +76,23 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Quick Links */}
             <div className="footer-section">
               <h4>Quick Links</h4>
-              <ul className="footer-links">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <a 
-                      href={link.href}
-                      onClick={(e) => handleNavClick(e, link.href)}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <nav aria-label="Footer navigation">
+                <ul className="footer-links">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <a 
+                        href={link.href}
+                        onClick={(e) => handleNavClick(e, link.href)}
+                        aria-label={`Navigate to ${link.label} section`}
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
 
             {/* Services */}
@@ -121,7 +107,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Contact & Social */}
+            {/* Contact & Professional Info */}
             <div className="footer-section footer-contact">
               <h4>Get In Touch</h4>
               <div className="contact-info">
@@ -129,33 +115,10 @@ const Footer = () => {
                   <span className="status-dot available"></span>
                   Available for freelance projects
                 </p>
-                <div className="contact-methods">
-                  <a href="mailto:rodillon.javy.32181@gmail.com" className="contact-email">
-                    <Mail size={16} />
-                    rodillon.javy.32181@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="social-section">
-                <h5>Connect With Me</h5>
-                <div className="social-links">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                      title={`Connect with me on ${social.label}`}
-                    >
-                      {social.icon}
-                      <div className="social-details">
-                        <span className="social-platform">{social.label}</span>
-                        <span className="social-handle">{social.handle}</span>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+                <p className="response-time">
+                  <Clock size={16} />
+                  Usually responds within 24 hours
+                </p>
               </div>
             </div>
           </div>
@@ -175,13 +138,32 @@ const Footer = () => {
             </div>
             
             <div className="footer-meta">
+              <CurrencyIndicator compact={true} />
               <span className="built-with">
                 Built with React & Modern CSS
               </span>
               <div className="footer-links-inline">
-                <a href="#" onClick={(e) => e.preventDefault()}>Privacy</a>
-                <a href="#" onClick={(e) => e.preventDefault()}>Terms</a>
-                <a href="#" onClick={(e) => e.preventDefault()}>Sitemap</a>
+                <a 
+                  href="#privacy" 
+                  onClick={(e) => e.preventDefault()}
+                  aria-label="Privacy Policy"
+                >
+                  Privacy
+                </a>
+                <a 
+                  href="#terms" 
+                  onClick={(e) => e.preventDefault()}
+                  aria-label="Terms of Service"
+                >
+                  Terms
+                </a>
+                <a 
+                  href="#sitemap" 
+                  onClick={(e) => e.preventDefault()}
+                  aria-label="Website Sitemap"
+                >
+                  Sitemap
+                </a>
               </div>
             </div>
 

@@ -11,7 +11,8 @@ import {
   ArrowRight,
   Star
 } from 'lucide-react';
-import { useTestimonials } from '../contexts/TestimonialContext';
+import { useTestimonials } from '../../contexts/TestimonialContext';
+import Price from '../ui/Price';
 import './Services.css';
 
 const Services = () => {
@@ -33,7 +34,7 @@ const Services = () => {
         'SEO-friendly structure',
         'Fast loading times'
       ],
-      pricing: 'Starting at $500',
+      price: 500, // Base price in USD
       duration: '1-3 weeks',
       category: 'web-development'
     },
@@ -51,7 +52,7 @@ const Services = () => {
         'Performance optimization',
         'Security implementation'
       ],
-      pricing: 'Starting at $800',
+      price: 800, // Base price in USD
       duration: '2-4 weeks',
       category: 'wordpress'
     },
@@ -69,7 +70,7 @@ const Services = () => {
         'Security updates',
         'Mobile responsiveness fixes'
       ],
-      pricing: 'Starting at $200',
+      price: 200, // Base price in USD
       duration: '3-7 days',
       category: 'optimization'
     },
@@ -87,7 +88,7 @@ const Services = () => {
         'Responsive design',
         'Modern JavaScript (ES6+)'
       ],
-      pricing: 'Starting at $1000',
+      price: 1000, // Base price in USD
       duration: '3-6 weeks',
       category: 'react'
     }
@@ -152,7 +153,14 @@ const Services = () => {
                   <p className="service-short-desc">{service.shortDescription}</p>
                 </div>
                 <div className="service-pricing">
-                  <div className="price">{service.pricing}</div>
+                  <div className="price">
+                    <span className="price-label">Starting at </span>
+                    <Price 
+                      amount={service.price} 
+                      size="medium" 
+                      showCountryFlag={true}
+                    />
+                  </div>
                   <div className="duration">
                     <Clock size={14} />
                     {service.duration}

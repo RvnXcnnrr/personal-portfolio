@@ -9,112 +9,24 @@ import {
   Filter,
   ArrowUpRight
 } from 'lucide-react';
+import { projectsData, projectCategories } from '../../data/projects';
+import { PROJECT_CATEGORIES } from '../../constants';
 import './Projects.css';
 
 const Projects = () => {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState(PROJECT_CATEGORIES.ALL);
   const [hoveredProject, setHoveredProject] = useState(null);
 
-  const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Website',
-      description: 'A fully responsive e-commerce website built with HTML, CSS, and JavaScript. Features include product catalog, shopping cart, and checkout process.',
-      longDescription: 'This project showcases my ability to create a complete e-commerce solution from scratch. It includes dynamic product filtering, cart management, local storage for persistence, and a clean, modern design that works perfectly across all devices.',
-      image: '/images/projects/ecommerce-website.jpg', // Add your project screenshot here
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
-      category: 'web',
-      liveDemo: 'https://demo-ecommerce.netlify.app',
-      sourceCode: 'https://github.com/RvnXcnnrr/ecommerce-site',
-      date: '2023-12',
-      featured: true,
-      status: 'completed'
-    },
-    {
-      id: 2,
-      title: 'WordPress Business Site',
-      description: 'Custom WordPress theme for a local business with custom post types, contact forms, and SEO optimization.',
-      longDescription: 'Developed a custom WordPress theme tailored for a local restaurant business. Includes custom post types for menu items, events, and testimonials. Features responsive design, contact forms, Google Maps integration, and comprehensive SEO optimization.',
-      image: '/images/projects/wordpress-business.jpg', // Add your project screenshot here
-      technologies: ['WordPress', 'PHP', 'CSS3', 'JavaScript'],
-      category: 'wordpress',
-      liveDemo: 'https://businesssite-demo.com',
-      sourceCode: 'https://github.com/RvnXcnnrr/wp-business-theme',
-      date: '2023-11',
-      featured: true,
-      status: 'completed'
-    },
-    {
-      id: 3,
-      title: 'Task Manager App',
-      description: 'A React-based task management application with drag-and-drop functionality and local storage.',
-      longDescription: 'Built with React and modern JavaScript, this task manager features drag-and-drop functionality, category organization, priority levels, and deadline tracking. Data persists using local storage, and the interface is fully responsive.',
-      image: '/images/projects/task-manager.jpg', // Add your project screenshot here
-      technologies: ['React', 'JavaScript', 'CSS3', 'HTML5'],
-      category: 'react',
-      liveDemo: 'https://taskmanager-react.netlify.app',
-      sourceCode: 'https://github.com/RvnXcnnrr/react-task-manager',
-      date: '2023-10',
-      featured: false,
-      status: 'completed'
-    },
-    {
-      id: 4,
-      title: 'Portfolio Website',
-      description: 'Personal portfolio website showcasing my skills and projects with dark/light theme toggle.',
-      longDescription: 'This very portfolio you\'re viewing! Built with React and modern CSS, featuring smooth animations, responsive design, dark/light theme toggle, and optimized performance. Demonstrates my frontend development skills and attention to detail.',
-      image: '/images/projects/portfolio-website.jpg', // Add your project screenshot here
-      technologies: ['React', 'CSS3', 'JavaScript', 'Vite'],
-      category: 'react',
-      liveDemo: '#',
-      sourceCode: 'https://github.com/javyrodillon/portfolio',
-      date: '2023-12',
-      featured: true,
-      status: 'completed'
-    },
-    {
-      id: 5,
-      title: 'Restaurant Landing Page',
-      description: 'Modern landing page for a restaurant with animations, menu showcase, and reservation system.',
-      longDescription: 'A visually stunning landing page for a fine dining restaurant. Features smooth scroll animations, interactive menu showcase, image gallery, customer testimonials, and an integrated reservation system. Fully responsive and optimized for performance.',
-      image: '/images/projects/restaurant-landing.jpg', // Add your project screenshot here
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'AOS'],
-      category: 'web',
-      liveDemo: 'https://restaurant-landing.netlify.app',
-      sourceCode: 'https://github.com/RvnXcnnrr/restaurant-landing',
-      date: '2023-09',
-      featured: false,
-      status: 'completed'
-    },
-    {
-      id: 6,
-      title: 'Blog CMS (In Progress)',
-      description: 'Full-stack blog management system built with React and Node.js (currently in development).',
-      longDescription: 'A comprehensive blog content management system featuring user authentication, rich text editor, image uploads, comment system, and admin dashboard. This project demonstrates my growing full-stack development skills.',
-      image: '/images/projects/blog-cms.jpg', // Add your project screenshot here
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      category: 'fullstack',
-      liveDemo: null,
-      sourceCode: 'https://github.com/RvnXcnnrr/blog-cms',
-      date: '2024-01',
-      featured: false,
-      status: 'in-progress'
-    }
-  ];
+  const projects = projectsData;
 
-  const categories = [
-    { key: 'all', label: 'All Projects', count: projects.length },
-    { key: 'web', label: 'Web Development', count: projects.filter(p => p.category === 'web').length },
-    { key: 'react', label: 'React Apps', count: projects.filter(p => p.category === 'react').length },
-    { key: 'wordpress', label: 'WordPress', count: projects.filter(p => p.category === 'wordpress').length },
-    { key: 'fullstack', label: 'Full Stack', count: projects.filter(p => p.category === 'fullstack').length }
-  ];
-
-  const filteredProjects = filter === 'all' 
+  const filteredProjects = filter === PROJECT_CATEGORIES.ALL 
     ? projects 
     : projects.filter(project => project.category === filter);
 
   const featuredProjects = projects.filter(project => project.featured);
+
+  // Use imported categories or create dynamic ones
+  const categories = projectCategories;
 
   const getTechColor = (tech) => {
     const colors = {
@@ -235,9 +147,9 @@ const Projects = () => {
               <div className="filter-tabs">
                 {categories.map((category) => (
                   <button
-                    key={category.key}
-                    className={`filter-tab ${filter === category.key ? 'active' : ''}`}
-                    onClick={() => setFilter(category.key)}
+                    key={category.value}
+                    className={`filter-tab ${filter === category.value ? 'active' : ''}`}
+                    onClick={() => setFilter(category.value)}
                   >
                     {category.label}
                     <span className="count">({category.count})</span>
