@@ -10,18 +10,6 @@ const isDevelopment = import.meta.env.DEV;
 
 // Validate configuration
 const validateConfig = () => {
-  // Debug: Log what we're getting from environment
-  console.log('🔍 EmailJS Environment Debug (Production):', {
-    'import.meta.env.VITE_EMAILJS_SERVICE_ID': import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    'import.meta.env.VITE_EMAILJS_TEMPLATE_ID': import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    'import.meta.env.VITE_EMAILJS_PUBLIC_KEY': import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-    'Final SERVICE_ID': SERVICE_ID,
-    'Final TEMPLATE_ID': TEMPLATE_ID,
-    'Final PUBLIC_KEY': PUBLIC_KEY,
-    'Environment Mode': import.meta.env.MODE,
-    'All env vars': import.meta.env
-  });
-
   const missing = [];
   if (!SERVICE_ID || SERVICE_ID === 'service_your_service_id') missing.push('SERVICE_ID');
   if (!TEMPLATE_ID || TEMPLATE_ID === 'template_your_template_id') missing.push('TEMPLATE_ID');
