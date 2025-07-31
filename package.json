@@ -16,7 +16,13 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "maintenance:on": "powershell -ExecutionPolicy Bypass -File ./maintenance.ps1 on",
+    "maintenance:off": "powershell -ExecutionPolicy Bypass -File ./maintenance.ps1 off",
+    "maintenance:status": "powershell -ExecutionPolicy Bypass -File ./maintenance.ps1 status",
+    "deploy": "npm run build && netlify deploy --prod --dir=dist",
+    "deploy:maintenance": "npm run maintenance:on && npm run deploy",
+    "deploy:normal": "npm run maintenance:off && npm run deploy"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
