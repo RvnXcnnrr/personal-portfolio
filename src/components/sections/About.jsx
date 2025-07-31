@@ -6,13 +6,13 @@ const About = () => {
   const achievements = [
     {
       icon: <BookOpen size={24} />,
-      title: 'BSIT Student',
-      description: 'Currently pursuing Bachelor of Science in Information Technology'
+      title: 'IT Graduate',
+      description: 'Fresh graduate with Bachelor of Science in Information Technology (2025)'
     },
     {
       icon: <Award size={24} />,
-      title: 'Certified Developer',
-      description: 'Completed courses on freeCodeCamp, Coursera, and other platforms'
+      title: 'CCNA Certified',
+      description: 'Enterprise Networking, Security, and Automation certification from USTSP'
     },
     {
       icon: <Users size={24} />,
@@ -29,6 +29,8 @@ const About = () => {
   const interests = [
     'Web Development',
     'UI/UX Design',
+    'Network Security',
+    'Enterprise Networking',
     'Open Source',
     'Mobile Apps',
     'Cloud Computing',
@@ -45,12 +47,12 @@ const About = () => {
             <div className="about-intro">
               <h3>
                 <Heart size={20} className="heart-icon" />
-                Passionate Web Developer & BSIT Student
+                Passionate Web Developer & IT Graduate
               </h3>
               <p>
-                Hello! I'm Javy Malisud Rodillon, a dedicated web development enthusiast currently pursuing my 
-                Bachelor of Science in Information Technology. My journey in web development 
-                started during my first year of college, and I've been passionate about creating 
+                Hello! I'm Javy Malisud Rodillon, a dedicated web developer with a fresh 
+                Bachelor of Science in Information Technology degree. My journey in web development 
+                started during my college years, and I've been passionate about creating 
                 amazing digital experiences ever since.
               </p>
             </div>
@@ -65,9 +67,10 @@ const About = () => {
               </p>
               
               <p>
-                As a freelancer, I've had the opportunity to work with diverse clients, helping 
-                them bring their digital visions to life. Each project teaches me something new 
-                and reinforces my love for problem-solving through code.
+                As a fresh IT graduate with networking expertise through CCNA certification, I bring 
+                both web development skills and technical infrastructure knowledge to every project. 
+                This unique combination allows me to create websites that are not only visually 
+                appealing but also technically sound and performance-optimized.
               </p>
             </div>
 
@@ -77,10 +80,11 @@ const About = () => {
                 Current Goals
               </h4>
               <ul>
+                <li>Secure a full-time web developer position in a dynamic tech company</li>
                 <li>Master React.js and Node.js for full-stack development</li>
-                <li>Build a strong portfolio of diverse web projects</li>
-                <li>Contribute to open-source projects</li>
-                <li>Land my first full-time developer role after graduation</li>
+                <li>Build enterprise-level applications with modern frameworks</li>
+                <li>Contribute to open-source projects and developer community</li>
+                <li>Integrate networking knowledge with web development for better solutions</li>
               </ul>
             </div>
 
@@ -130,11 +134,15 @@ const About = () => {
                 </div>
                 <div className="info-item">
                   <strong>Education:</strong>
-                  <span>BSIT (Expected 2025)</span>
+                  <span>Bachelor of Science in Information Technology (2025)</span>
                 </div>
                 <div className="info-item">
                   <strong>Experience:</strong>
-                  <span>2+ Years Self-Learning</span>
+                  <span>2+ Years Development Experience</span>
+                </div>
+                <div className="info-item">
+                  <strong>Certifications:</strong>
+                  <span>CCNA Enterprise Networking</span>
                 </div>
                 <div className="info-item">
                   <strong>Availability:</strong>
@@ -153,8 +161,9 @@ const About = () => {
           <div className="cta-content">
             <h3>Ready to Work Together?</h3>
             <p>
-              I'm always excited to take on new challenges and collaborate on interesting projects. 
-              Let's discuss how I can help bring your ideas to life!
+              As a fresh IT graduate with both web development and networking expertise, 
+              I'm excited to take on new challenges and contribute to innovative projects. 
+              Let's discuss how my unique skill combination can help bring your vision to life!
             </p>
             <div className="cta-actions">
               <a href="#contact" className="btn btn-primary">Get In Touch</a>

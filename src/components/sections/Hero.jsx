@@ -7,7 +7,7 @@ const Hero = () => {
   const roles = [
     'Web Developer',
     'WordPress Expert',
-    'BSIT Student',
+    'IT Graduate',
     'Frontend Enthusiast'
   ];
 
@@ -90,7 +90,7 @@ const Hero = () => {
 
             <p className="hero-description">
               Passionate about creating amazing web experiences with modern technologies. 
-              Currently pursuing BSIT while building responsive websites and WordPress solutions 
+              Fresh graduate with Bachelor of Science in Information Technology, building responsive websites and WordPress solutions 
               for clients worldwide.
             </p>
 

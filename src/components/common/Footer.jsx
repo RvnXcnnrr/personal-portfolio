@@ -53,11 +53,11 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="footer-brand">
               <div className="brand-logo">
-                <span className="logo-text text-gradient">JMR Portfolio</span>
+                <span className="logo-text text-gradient">Javy Rodillon</span>
               </div>
               <p className="brand-description">
-                Passionate BSIT student and web developer creating amazing digital experiences 
-                with modern technologies. Specializing in React.js, WordPress, and responsive design.
+                Passionate about creating amazing web experiences with modern technologies. 
+                Fresh graduate with Bachelor of Science in Information Technology, building responsive websites and WordPress solutions for clients worldwide.
               </p>
               <div className="brand-stats">
                 <div className="stat">

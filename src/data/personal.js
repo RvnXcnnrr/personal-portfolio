@@ -1,7 +1,7 @@
 // Personal information and contact data
 export const personalInfo = {
   name: 'Javy Malisud Rodillon',
-  title: 'Web Developer & BSIT Student',
+  title: 'Web Developer & IT Graduate',
   email: 'rodillon.javy.32181@gmail.com',
   phone: '+63 XXX XXX XXXX', // Update with real number
   location: 'Available for Remote Work',
@@ -9,10 +9,10 @@ export const personalInfo = {
   
   // Bio information
   bio: {
-    short: 'Passionate web development enthusiast currently pursuing Bachelor of Science in Information Technology.',
-    long: `Hello! I'm Javy Malisud Rodillon, a dedicated web development enthusiast currently pursuing my 
-           Bachelor of Science in Information Technology. My journey in web development started during my first 
-           year of college, and I've been passionate about creating amazing digital experiences ever since.`,
+    short: 'Passionate about creating amazing web experiences with modern technologies. Fresh graduate with Bachelor of Science in Information Technology, building responsive websites and WordPress solutions for clients worldwide.',
+    long: `Hello! I'm Javy Malisud Rodillon, a dedicated web developer with a fresh 
+           Bachelor of Science in Information Technology degree. My journey in web development started during my 
+           college years, and I've been passionate about creating amazing digital experiences ever since.`,
     
     story: `What began as curiosity about how websites work has evolved into a deep passion for web development. 
             I specialize in creating responsive, user-friendly websites using modern technologies like HTML5, CSS3, 
@@ -30,8 +30,8 @@ export const personalInfo = {
   details: {
     age: 24,
     birthday: 'May 12, 2001',
-    education: 'BSIT (Expected 2025)',
-    experience: '2+ Years Self-Learning',
+    education: 'Bachelor of Science in Information Technology (2025)',
+    experience: '2+ Years Development Experience',
     availability: 'Open to Opportunities',
     languages: ['English', 'Filipino']
   },
@@ -60,8 +60,8 @@ export const personalInfo = {
 export const achievements = [
   {
     icon: 'BookOpen',
-    title: 'BSIT Student',
-    description: 'Currently pursuing Bachelor of Science in Information Technology'
+    title: 'IT Graduate',
+    description: 'Fresh graduate with Bachelor of Science in Information Technology'
   },
   {
     icon: 'Award',

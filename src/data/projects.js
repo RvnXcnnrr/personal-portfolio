@@ -2,21 +2,22 @@
 export const projectsData = [
   {
     id: 1,
-    title: 'E-Commerce Website',
-    description: 'A fully responsive e-commerce website built with HTML, CSS, and JavaScript. Features include product catalog, shopping cart, and checkout process.',
-    longDescription: 'This project showcases my ability to create a complete e-commerce solution from scratch. It includes dynamic product filtering, cart management, local storage for persistence, and a clean, modern design that works perfectly across all devices.',
+    title: 'Product Sales and Inventory Management System',
+    description: 'A comprehensive sales and inventory management system built with HTML, CSS, and JavaScript using local database storage. Features include product management, sales tracking, and inventory monitoring.',
+    longDescription: 'This project demonstrates my ability to create a complete business management solution for local operations. It includes product catalog management, sales transaction processing, inventory level monitoring, and reporting features - all powered by local database storage for offline functionality.',
     image: '/images/projects/ecommerce-website.jpg',
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'LocalStorage', 'IndexedDB'],
     category: 'web',
     liveDemo: 'https://demo-ecommerce.netlify.app',
     sourceCode: 'https://github.com/RvnXcnnrr/ecommerce-site',
     date: '2023-12',
     featured: true,
     highlights: [
-      'Responsive design with mobile-first approach',
-      'Dynamic product filtering and search',
-      'Shopping cart with local storage',
-      'Clean, modern UI/UX design'
+      'Product catalog management with CRUD operations',
+      'Sales transaction tracking and history',
+      'Real-time inventory level monitoring',
+      'Local database storage for offline functionality',
+      'Responsive design for desktop and mobile use'
     ]
   },
   {
@@ -27,7 +28,7 @@ export const projectsData = [
     image: '/images/projects/portfolio-website.jpg',
     technologies: ['React', 'JavaScript', 'CSS3', 'Vite'],
     category: 'web',
-    liveDemo: 'https://javy-portfolio.netlify.app',
+    liveDemo: 'https://rodillondev.netlify.app/',
     sourceCode: 'https://github.com/RvnXcnnrr/personal-portfolio',
     date: '2024-01',
     featured: true,

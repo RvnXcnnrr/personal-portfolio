@@ -13,6 +13,14 @@ import './Skills.css';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('frontend');
+  const [expandedCerts, setExpandedCerts] = useState({});
+
+  const toggleCertDetails = (index) => {
+    setExpandedCerts(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
 
   const skillCategories = {
     frontend: {
@@ -62,10 +70,34 @@ const Skills = () => {
         { name: 'PHP', level: 40, experience: 'Learning', color: '#777bb4' },
         { name: 'MySQL', level: 55, experience: 'Learning', color: '#4479a1' }
       ]
+    },
+    networking: {
+      title: 'Networking & Security',
+      icon: <Globe size={24} />,
+      skills: [
+        { name: 'CCNA Enterprise Networking', level: 85, experience: 'Certified', color: '#1ba1e2' },
+        { name: 'Network Security', level: 80, experience: 'Certified', color: '#e74c3c' },
+        { name: 'Network Automation', level: 75, experience: 'Certified', color: '#9b59b6' },
+        { name: 'Routing & Switching', level: 85, experience: 'Certified', color: '#27ae60' },
+        { name: 'Network Troubleshooting', level: 80, experience: 'Certified', color: '#f39c12' },
+        { name: 'LAN/WAN Configuration', level: 82, experience: 'Certified', color: '#34495e' }
+      ]
     }
   };
 
   const certifications = [
+    {
+      title: 'CCNA: Enterprise Networking, Security, and Automation',
+      provider: 'IT3R1 | Elective 2',
+      academy: 'University of Science and Technology of Southern Philippines',
+      instructor: 'Dr. John Benedict Bernardo',
+      date: 'Jun 01, 2025',
+      hours: '70 Hours',
+      credential: '/certificates/_certificate_rodillon-javy-32181-gmail-com_b299fdfc-db46-4f4a-bf88-f4835c07935c.pdf',
+      description: 'The third in a three-course series to build your networking skills and get ready for CCNA certification and associate-level jobs.',
+      skillsLearned: 'CCNA: Enterprise Networking, Security, and Automation',
+      featured: true
+    },
     {
       title: 'Responsive Web Design',
       provider: 'freeCodeCamp',
@@ -177,13 +209,49 @@ const Skills = () => {
           
           <div className="certifications-grid">
             {certifications.map((cert, index) => (
-              <div key={index} className="certification-card card">
+              <div key={index} className={`certification-card card ${cert.featured ? 'featured' : ''}`}>
                 <div className="cert-icon">
                   <Star size={20} />
                 </div>
                 <h4>{cert.title}</h4>
                 <p className="cert-provider">{cert.provider}</p>
-                <p className="cert-date">{cert.date}</p>
+                {cert.academy && (
+                  <p className="cert-academy">Academy: {cert.academy}</p>
+                )}
+                {cert.instructor && (
+                  <p className="cert-instructor">Instructor: {cert.instructor}</p>
+                )}
+                <p className="cert-date">Issued Date: {cert.date}</p>
+                {cert.hours && (
+                  <p className="cert-hours">Total Hours: {cert.hours}</p>
+                )}
+                
+                {/* See More Button */}
+                {(cert.description || cert.skillsLearned) && (
+                  <button 
+                    className="see-more-btn"
+                    onClick={() => toggleCertDetails(index)}
+                  >
+                    {expandedCerts[index] ? 'See Less' : 'See More'} 
+                    <span className={`arrow ${expandedCerts[index] ? 'up' : 'down'}`}>▼</span>
+                  </button>
+                )}
+
+                {/* Expandable Content */}
+                {expandedCerts[index] && (
+                  <div className="cert-expanded-content">
+                    {cert.description && (
+                      <p className="cert-description">{cert.description}</p>
+                    )}
+                    {cert.skillsLearned && (
+                      <div className="cert-skills">
+                        <strong>Skills You Learn:</strong>
+                        <p>{cert.skillsLearned}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 <a 
                   href={cert.credential} 
                   target="_blank" 
