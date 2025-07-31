@@ -7,7 +7,6 @@ import {
   Globe,
   Clock
 } from 'lucide-react';
-import CurrencyIndicator from '../ui/CurrencyIndicator';
 import './Footer.css';
 
 const Footer = () => {
@@ -138,10 +137,6 @@ const Footer = () => {
             </div>
             
             <div className="footer-meta">
-              <CurrencyIndicator compact={true} />
-              <span className="built-with">
-                Built with React & Modern CSS
-              </span>
               <div className="footer-links-inline">
                 <a 
                   href="#privacy" 

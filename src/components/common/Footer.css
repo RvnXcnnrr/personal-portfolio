@@ -446,6 +446,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  order: 1;
 }
 
 .copyright p {
@@ -454,6 +455,23 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  order: 2;
+}
+
+.footer-links-inline {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.scroll-to-top {
+  order: 3;
 }
 
 .heart-icon {
@@ -473,12 +491,7 @@
   }
 }
 
-.footer-meta {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
+
 
 .built-with {
   color: var(--text-secondary);
@@ -654,10 +667,6 @@
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-  }
-
-  .footer-meta {
-    justify-content: center;
   }
 
     grid-template-columns: 1fr;
