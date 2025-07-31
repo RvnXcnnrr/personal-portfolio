@@ -73,19 +73,11 @@ const Contact = () => {
         throw new Error('Please enter a valid email address');
       }
 
-      console.log('Submitting contact form...', { 
-        name: formData.name, 
-        email: formData.email, 
-        hasSubject: !!formData.subject,
-        messageLength: formData.message?.length 
-      });
-
       // Send email using EmailJS
       const result = await sendContactEmail(formData);
       
       if (result.success) {
         setFormStatus('success');
-        console.log('Contact form submitted successfully');
         
         // Clear form on success
         setFormData({

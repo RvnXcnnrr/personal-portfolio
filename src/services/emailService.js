@@ -106,12 +106,6 @@ export const sendContactEmail = async (formData) => {
       reply_to: formData.email
     };
 
-    console.log('Sending email with params:', {
-      serviceId: SERVICE_ID,
-      templateId: TEMPLATE_ID,
-      templateParams: { ...templateParams, to_email: '[hidden]' } // Hide email in logs
-    });
-
     const response = await emailjs.send(
       SERVICE_ID,
       TEMPLATE_ID,
@@ -119,8 +113,6 @@ export const sendContactEmail = async (formData) => {
       PUBLIC_KEY
     );
 
-    console.log('Email sent successfully:', response);
-    
     return {
       success: true,
       message: 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!',
@@ -208,7 +200,6 @@ export const sendTestimonialEmail = async (testimonialData) => {
       templateParams
     );
 
-    console.log('Testimonial email sent successfully:', response);
     return {
       success: true,
       message: 'Testimonial submitted successfully!'
