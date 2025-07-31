@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   Wrench, 
   Clock, 
@@ -12,6 +12,15 @@ import './UnderMaintenance.css';
 
 const UnderMaintenance = () => {
   const currentYear = new Date().getFullYear();
+
+  // Set theme based on system preference or saved preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    
+    document.documentElement.setAttribute('data-theme', theme);
+  }, []);
 
   return (
     <div className="maintenance-container">

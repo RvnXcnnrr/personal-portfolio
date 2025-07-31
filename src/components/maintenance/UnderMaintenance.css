@@ -361,16 +361,78 @@
 }
 
 /* Dark mode specific adjustments */
+:root[data-theme="dark"] .maintenance-container {
+  background: linear-gradient(135deg, 
+    #1a202c 0%, 
+    #2d3748 100%) !important;
+}
+
+:root[data-theme="dark"] .maintenance-title {
+  color: #f7fafc !important;
+}
+
+:root[data-theme="dark"] .maintenance-description {
+  color: #e2e8f0 !important;
+}
+
+:root[data-theme="dark"] .detail-item {
+  color: #e2e8f0 !important;
+}
+
+:root[data-theme="dark"] .maintenance-contact {
+  background: rgba(45, 55, 72, 0.3) !important;
+  border-color: #4a5568 !important;
+}
+
+:root[data-theme="dark"] .maintenance-contact h3 {
+  color: #f7fafc !important;
+}
+
+:root[data-theme="dark"] .maintenance-contact p {
+  color: #e2e8f0 !important;
+}
+
+:root[data-theme="dark"] .maintenance-footer {
+  border-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Fallback for system dark mode preference */
 @media (prefers-color-scheme: dark) {
   .maintenance-container {
     background: linear-gradient(135deg, 
-      var(--bg-primary, #1a202c) 0%, 
-      var(--bg-secondary, #2d3748) 100%);
+      #1a202c 0%, 
+      #2d3748 100%);
+  }
+  
+  .maintenance-title {
+    color: #f7fafc;
+  }
+  
+  .maintenance-description {
+    color: #e2e8f0;
+  }
+  
+  .detail-item {
+    color: #e2e8f0;
   }
   
   .maintenance-contact {
-    background: rgba(var(--bg-secondary, #2d3748), 0.3);
-    border-color: var(--border-color, #4a5568);
+    background: rgba(45, 55, 72, 0.3);
+    border-color: #4a5568;
+  }
+  
+  .maintenance-contact h3 {
+    color: #f7fafc;
+  }
+  
+  .maintenance-contact p {
+    color: #e2e8f0;
+  }
+  
+  .maintenance-footer {
+    border-color: #4a5568;
+    color: #e2e8f0;
   }
 }
 
