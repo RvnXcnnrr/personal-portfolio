@@ -87,6 +87,17 @@ const Skills = () => {
 
   const certifications = [
     {
+      title: 'Computer System Servicing NC II',
+      provider: 'TESDA',
+      academy: 'Technical Education and Skills Development Authority',
+      date: '2024',
+      hours: '320 Hours',
+      credential: '/certificates/tesda-computer-system-servicing-nc2.pdf',
+      description: 'National Certification for Computer System Servicing covering computer hardware troubleshooting, software installation, and system maintenance.',
+      skillsLearned: 'Computer Hardware, System Troubleshooting, Software Installation, Hardware Maintenance',
+      featured: true
+    },
+    {
       title: 'CCNA: Enterprise Networking, Security, and Automation',
       provider: 'IT3R1 | Elective 2',
       academy: 'University of Science and Technology of Southern Philippines',

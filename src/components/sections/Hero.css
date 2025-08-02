@@ -169,6 +169,7 @@
 .hero-social {
   display: flex;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .social-link {
@@ -301,7 +302,7 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -311,6 +312,7 @@
   cursor: pointer;
   color: var(--text-secondary);
   transition: color 0.3s ease;
+  z-index: 10;
 }
 
 .scroll-indicator:hover {
@@ -349,16 +351,22 @@
 
   .hero-social {
     justify-content: center;
+    margin-bottom: 3rem;
   }
 
   .hero-stats {
     justify-content: center;
   }
+
+  .scroll-indicator {
+    bottom: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 70px;
+    padding-top: 80px; /* Increased for mobile navbar */
+    min-height: calc(100vh - 20px); /* Account for mobile browser chrome */
   }
 
   .hero-content {
@@ -367,6 +375,7 @@
 
   .hero-name {
     font-size: 2.5rem;
+    line-height: 1.1;
   }
 
   .hero-role {
@@ -375,6 +384,7 @@
 
   .hero-description {
     font-size: 1rem;
+    text-align: center;
   }
 
   .hero-image {
@@ -384,25 +394,80 @@
 
   .hero-actions {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
 
   .hero-stats {
     gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .stat strong {
     font-size: 1.3rem;
   }
+
+  .hero-social {
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Hide scroll indicator on mobile when navigation might be open */
+  .scroll-indicator {
+    z-index: 5;
+    bottom: 1.5rem;
+  }
+}
+
+/* Medium screens where overlap might occur */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-social {
+    margin-bottom: 3.5rem;
+  }
+  
+  .scroll-indicator {
+    bottom: 2.5rem;
+  }
+}
+
+/* Landscape phones */
+@media (max-height: 600px) and (orientation: landscape) {
+  .scroll-indicator {
+    display: none;
+  }
+  
+  .hero-social {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding-top: 80px;
+    min-height: calc(100vh - 30px);
+  }
+
   .hero-name {
     font-size: 2rem;
+    line-height: 1.1;
   }
 
   .hero-role {
     font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    padding: 0 1rem;
   }
 
   .hero-image {
@@ -412,9 +477,40 @@
 
   .hero-stats {
     gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero-actions {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-actions .btn {
+    padding: 1rem;
+    font-size: 0.9rem;
+    min-height: 48px;
   }
 
   .floating-element {
     display: none; /* Hide floating elements on very small screens */
+  }
+
+  .hero-social {
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-indicator {
+    bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .scroll-text {
+    font-size: 0.8rem;
   }
 }

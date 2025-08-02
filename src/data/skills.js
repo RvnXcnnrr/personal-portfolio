@@ -42,6 +42,27 @@ export const skillsData = {
       category: 'Tools',
       icon: 'git',
       description: 'Version control and collaboration'
+    },
+    {
+      name: 'Computer Hardware',
+      level: 85,
+      category: 'Systems',
+      icon: 'computer',
+      description: 'PC assembly, troubleshooting, and repair'
+    },
+    {
+      name: 'System Administration',
+      level: 80,
+      category: 'Systems',
+      icon: 'server',
+      description: 'Windows system configuration and maintenance'
+    },
+    {
+      name: 'Network Configuration',
+      level: 75,
+      category: 'Systems',
+      icon: 'network',
+      description: 'LAN setup and network troubleshooting'
     }
   ],
   soft: [

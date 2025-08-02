@@ -45,7 +45,6 @@ Current values:
 try {
   validateConfig();
   emailjs.init(PUBLIC_KEY);
-  console.log('✅ EmailJS initialized successfully');
 } catch (error) {
   console.error('❌ EmailJS initialization failed:', error.message);
   

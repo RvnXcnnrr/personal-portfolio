@@ -12,6 +12,7 @@ import {
   Contact 
 } from './components';
 import './styles/global.css';
+import './styles/mobile-fixes.css';
 
 function App() {
   return (

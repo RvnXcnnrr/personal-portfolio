@@ -1,0 +1,322 @@
+/* Mobile and Tablet Responsive Fixes */
+/* This file contains additional fixes for mobile and tablet responsiveness */
+
+/* Fix for mobile navigation layering */
+@media (max-width: 968px) {
+  /* Ensure mobile navigation is above all content */
+  .navbar {
+    z-index: 1100 !important;
+  }
+  
+  .mobile-nav {
+    z-index: 1150 !important;
+    position: absolute !important;
+    background: var(--bg-primary) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  /* Lower z-index for hero elements when mobile menu might be open */
+  .hero {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+  
+  .scroll-indicator {
+    z-index: 5 !important;
+  }
+  
+  .floating-elements,
+  .floating-element {
+    z-index: 2 !important;
+  }
+}
+
+/* Ensure proper button spacing and prevent overlapping */
+@media (max-width: 768px) {
+  /* Button groups spacing */
+  .hero-actions,
+  .service-actions,
+  .project-actions,
+  .cta-actions {
+    gap: 1rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 1rem 0 !important;
+  }
+
+  /* Button sizing for touch targets */
+  .btn,
+  .cta-button,
+  .service-actions .btn,
+  .project-actions .btn {
+    min-height: 44px !important;
+    padding: 0.875rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0.25rem 0 !important;
+  }
+
+  /* Section spacing to prevent overlap */
+  .section {
+    padding: 3rem 0 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden !important;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 0 1rem !important;
+    max-width: 100% !important;
+  }
+
+  /* Form elements touch targets */
+  input,
+  select,
+  textarea,
+  button {
+    min-height: 44px !important;
+  }
+
+  /* Card spacing */
+  .card,
+  .service-card,
+  .project-card {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Grid responsiveness */
+  .grid,
+  .services-grid,
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Navigation fixes */
+  .navbar {
+    height: 70px !important;
+  }
+
+  /* Hero section adjustment for navigation */
+  .hero {
+    padding-top: 90px !important;
+  }
+
+  /* Ensure buttons don't overlap with other elements */
+  .btn-primary,
+  .btn-outline {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    border: 2px solid !important;
+  }
+
+  /* Fix for overlapping content */
+  section {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Navigation should always be on top */
+  .navbar,
+  .mobile-nav {
+    z-index: 1100 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller button sizing for very small screens */
+  .btn,
+  .cta-button {
+    min-height: 48px !important;
+    padding: 1rem !important;
+    font-size: 0.9rem !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  /* Reduced section padding */
+  .section {
+    padding: 2.5rem 0 !important;
+  }
+
+  /* Tighter container */
+  .container {
+    padding: 0 0.75rem !important;
+  }
+
+  /* Text sizing */
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Social links spacing */
+  .hero-social,
+  .footer-social {
+    gap: 0.75rem !important;
+    justify-content: center !important;
+  }
+
+  /* Modal and popup responsiveness */
+  .modal,
+  .popup {
+    margin: 1rem !important;
+    width: calc(100% - 2rem) !important;
+    max-width: none !important;
+  }
+
+  /* Hero specific fixes */
+  .hero {
+    padding-top: 100px !important;
+    min-height: calc(100vh - 30px) !important;
+  }
+
+  /* Ensure proper button groups spacing */
+  .hero-actions {
+    padding: 0 1rem !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Tablet specific fixes */
+@media (min-width: 481px) and (max-width: 768px) {
+  .btn,
+  .cta-button {
+    max-width: 250px !important;
+  }
+
+  .hero-actions,
+  .service-actions {
+    flex-direction: row !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .hero-actions .btn,
+  .service-actions .btn {
+    flex: 1 !important;
+    min-width: 140px !important;
+    max-width: 200px !important;
+  }
+}
+
+/* Landscape phone fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+  }
+
+  .hero-content {
+    gap: 1.5rem !important;
+  }
+
+  .floating-element {
+    display: none !important;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .btn,
+  .cta-button {
+    border-width: 1px !important;
+  }
+}
+
+/* Focus and accessibility improvements */
+@media (max-width: 768px) {
+  button:focus,
+  .btn:focus,
+  a:focus {
+    outline: 3px solid var(--primary-color) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Ensure text is readable */
+  p,
+  .text-secondary {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Fix for sticky elements on mobile */
+@media (max-width: 768px) {
+  .sticky,
+  .fixed {
+    position: relative !important;
+  }
+
+  .navbar {
+    position: fixed !important;
+    z-index: 1000 !important;
+  }
+}
+
+/* Additional spacing fixes for specific sections */
+@media (max-width: 768px) {
+  /* Footer CTA buttons */
+  .footer .cta-buttons {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    align-items: center !important;
+  }
+
+  /* Services pricing and actions */
+  .service-pricing {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Project card actions */
+  .project-card .project-actions {
+    margin-top: 1rem !important;
+  }
+
+  /* Contact form submit button */
+  .contact-form .submit-btn {
+    margin-top: 1rem !important;
+    width: 100% !important;
+  }
+
+  /* Skills category navigation */
+  .category-nav {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+}
+
+/* Ensure no content gets cut off */
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Prevent text overflow */
+  .hero-name,
+  .hero-role,
+  .section-title {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}

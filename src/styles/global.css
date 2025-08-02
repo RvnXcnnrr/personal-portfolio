@@ -136,6 +136,7 @@ a:hover {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -147,6 +148,9 @@ a:hover {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
+  min-height: 44px; /* Ensure minimum touch target size */
+  text-align: center;
 }
 
 .btn-primary {
@@ -168,6 +172,8 @@ a:hover {
 .btn-outline:hover {
   background: var(--primary-color);
   color: white;
+  transform: translateY(-1px);
+}
   transform: translateY(-2px);
 }
 
@@ -296,7 +302,7 @@ a:hover {
   }
   
   .container {
-    padding: 0 0.75rem;
+    padding: 0 1rem;
   }
   
   .section {
@@ -316,14 +322,17 @@ a:hover {
   }
   
   .btn {
-    padding: 0.625rem 1.25rem;
+    padding: 0.75rem 1.25rem;
     font-size: 0.9rem;
+    width: 100%; /* Full width on mobile for better touch targets */
+    max-width: 300px; /* But not too wide */
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
   
   .section {
@@ -344,6 +353,12 @@ a:hover {
   
   .grid {
     gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+    min-height: 48px; /* Larger touch target on small screens */
   }
 }
 

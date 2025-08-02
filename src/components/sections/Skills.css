@@ -448,8 +448,10 @@
 
   .category-btn {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     justify-content: center;
+    padding: 0.875rem 1.25rem;
+    min-height: 44px;
   }
 
   .skills-grid {
