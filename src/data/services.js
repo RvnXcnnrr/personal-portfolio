@@ -56,6 +56,28 @@ export const servicesData = [
       premium: { price: 1000, currency: 'USD', features: ['Full UX Research', 'Interactive Prototypes'] }
     },
     icon: 'palette'
+  },
+  {
+    id: 4,
+    title: 'IT Support & Technical Services',
+    description: 'Remote IT support and technical assistance for individuals and small businesses.',
+    features: [
+      'Remote Computer Troubleshooting',
+      'System Configuration & Setup',
+      'Software Installation & Updates',
+      'Network Configuration',
+      'Data Backup & Recovery',
+      'Hardware Diagnostics',
+      'Technical Consultation'
+    ],
+    technologies: ['Windows', 'Remote Desktop', 'Network Tools', 'System Diagnostics'],
+    pricing: {
+      basic: { price: 25, currency: 'USD', features: ['1 Hour Remote Support', 'Basic Troubleshooting'] },
+      standard: { price: 40, currency: 'USD', features: ['2 Hours Support', 'System Optimization', 'Software Setup'] },
+      premium: { price: 75, currency: 'USD', features: ['Monthly Support Package', 'Priority Response', 'Preventive Maintenance'] }
+    },
+    icon: 'headset',
+    remote: true
   }
 ];
 

@@ -63,6 +63,20 @@ export const skillsData = {
       category: 'Systems',
       icon: 'network',
       description: 'LAN setup and network troubleshooting'
+    },
+    {
+      name: 'Software Installation',
+      level: 85,
+      category: 'Systems',
+      icon: 'download',
+      description: 'OS installation, software deployment, and updates'
+    },
+    {
+      name: 'Data Backup & Recovery',
+      level: 80,
+      category: 'Systems',
+      icon: 'shield',
+      description: 'Data protection, backup strategies, and recovery procedures'
     }
   ],
   soft: [
@@ -97,5 +111,9 @@ export const toolsAndTechnologies = [
   'Chrome DevTools',
   'Netlify',
   'Vercel',
-  'npm/yarn'
+  'npm/yarn',
+  'Remote Desktop',
+  'Windows System Tools',
+  'Network Diagnostic Tools',
+  'System Monitoring Software'
 ];
